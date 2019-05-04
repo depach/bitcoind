@@ -2,10 +2,7 @@
 
 Docker image of Bitcoin core bitcoind built from sources on ubuntu
 
-forked from https://github.com/jamesob/docker-bitcoind - many thanks!
-
-A Docker configuration with sane defaults for running a fully-validating
-Bitcoin node, based on [Alpine Linux](https://alpinelinux.org/).
+forked from [jamesob/docker-bitcoind](https://github.com/jamesob/docker-bitcoind) - many thanks!
 
 ## Quick start
 
