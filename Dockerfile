@@ -29,6 +29,6 @@ WORKDIR /root/
 RUN rm -fr bitcoin
 RUN mkdir /root/.bitcoin
 
-# ADD ./bin/docker_entrypoint.sh /usr/local/bin/docker_entrypoint.sh
-# RUN chmod a+x /usr/local/bin/docker_entrypoint.sh
-# ENTRYPOINT ["/usr/local/bin/docker_entrypoint.sh"]
+ADD ./bin/docker_entrypoint.sh /usr/local/bin/docker_entrypoint.sh
+RUN chmod a+x /usr/local/bin/docker_entrypoint.sh
+ENTRYPOINT ["/usr/local/bin/docker_entrypoint.sh"]
