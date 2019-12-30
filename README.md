@@ -1,5 +1,7 @@
 # bitcoind
 
+Docker hub: [depach/bitcoind](https://hub.docker.com/r/depach/bitcoind)
+
 Docker image of Bitcoin core bitcoind built from sources on ubuntu
 
 forked from [jamesob/docker-bitcoind](https://github.com/jamesob/docker-bitcoind) - many thanks!
