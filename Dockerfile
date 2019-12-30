@@ -22,7 +22,7 @@ RUN apt-get update; \
 RUN apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 WORKDIR /root/
-RUN git clone --branch v0.18.1 https://github.com/bitcoin/bitcoin.git
+RUN git clone --branch v0.19.0.1 https://github.com/bitcoin/bitcoin.git
 WORKDIR /root/bitcoin
 RUN ./autogen.sh ; ./configure ; make ; make install ; make clean
 WORKDIR /root/
