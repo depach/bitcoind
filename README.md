@@ -39,7 +39,7 @@ on environment variables passed to the container:
 | BTC_RPCUSER | btc |
 | BTC_RPCPASSWORD | changemeplz |
 | BTC_RPCPORT | 8332 |
-| BTC_RPCALLOWIP | ::/0 |
+| BTC_RPCALLOWIP | 172.0.0.0/8 |
 | BTC_RPCCLIENTTIMEOUT | 30 |
 | BTC_DISABLEWALLET | 1 |
 | BTC_TXINDEX | 0 |
@@ -70,13 +70,13 @@ Requires=docker.service
 [Service]
 ExecStartPre=-/usr/bin/docker kill bitcoind
 ExecStartPre=-/usr/bin/docker rm bitcoind
-ExecStartPre=/usr/bin/docker pull jamesob/bitcoind
+ExecStartPre=/usr/bin/docker pull depach/bitcoind
 ExecStart=/usr/bin/docker run \
     --name bitcoind \
     -p 8333:8333 \
     -p 127.0.0.1:8332:8332 \
     -v /data/bitcoind:/root/.bitcoin \
-    jamesob/bitcoind
+    depach/bitcoind
 ExecStop=/usr/bin/docker stop bitcoind
 ```
 
